@@ -6,10 +6,18 @@ let valId = false;
 let valPw = false;
 
 email.addEventListener("keyup", (e) => {
-    valId = getValueValidation(e.currentTarget.value);
+    if ( email.value.includes("@") ){
+        valId = getValueValidation(e.currentTarget.value);
+    } else {
+        valId = false;
+    }
 });
 pw.addEventListener("keyup", (e) => {
-    valPw = getValueValidation(e.currentTarget.value);
+    if( pw.value.length > 4 ){
+        valPw = getValueValidation(e.currentTarget.value);
+    } else {
+        valPw = false;
+    }
 })
 const getValueValidation = (value) => {
     let valid = false;
