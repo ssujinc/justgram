@@ -51,6 +51,7 @@ main .feeds_stn{ padding-top:60px; margin-right:28px; flex:1 auto; }
 .feeds_cont .desc_cont .comments > div:first-child{ margin-top:0; }
 .feeds_cont .desc_cont .comments > div p{ width:calc(100% - 38px); }
 .feeds_cont .desc_cont .comments > div button{ flex:0 auto; padding:0 4px; font-size:12px; }
+.feeds_cont .desc_cont .comments > div .btn_like .fa-solid{ color:#ee4955; }
 .feeds_cont .desc_cont .btn_commDelete{ display:none;}
 .feeds_cont .desc_cont .comments > div:hover .btn_commDelete{ display:block; }
 .feeds_cont .desc_cont >.color_darkGray{ color:#262626; margin-top:4px; font-size:10px; }

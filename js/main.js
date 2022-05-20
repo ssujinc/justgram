@@ -38,7 +38,8 @@ function writeComment(index){
     const comments = document.querySelectorAll(".feeds_cnt .comments")[index];
     comments.appendChild(commentDiv);
     commentInput.value = "";
-    deleteComment();
+    btnAddLikeComment();
+    btnDeleteComment();
 }
 
 function createCommentDiv(writer, content){
@@ -57,6 +58,7 @@ function createCommentDiv(writer, content){
     btnCommentDelete.className = "btn_commDelete";
     btnCommentDelete.innerHTML = `<i class="fas fa-times-circle"></i>`;
     const btnCommentLike = document.createElement("button");
+    btnCommentLike.className = "btn_like";
     btnCommentLike.innerHTML = `<i class="fa-regular fa-heart"></i>`;
 
     commentP.append(writerB, " ", commentSpan);
@@ -65,7 +67,7 @@ function createCommentDiv(writer, content){
     return commentDiv;
 }
 
-function deleteComment() {
+function btnDeleteComment() {
     const btncommDeletes = document.querySelectorAll(".btn_commDelete");
     btncommDeletes.forEach((btncommDelete) => {
         btncommDelete.addEventListener("click", (e) => {
@@ -74,4 +76,19 @@ function deleteComment() {
     })
 }
 
-deleteComment();
+function btnAddLikeComment(){
+    const btnLikes = document.querySelectorAll(".btn_like");
+    btnLikes.forEach((btnLike) => {
+        btnLike.addEventListener("click", (e) =>{
+            if( e.currentTarget.firstElementChild.classList.contains("fa-regular") ){
+                e.currentTarget.firstElementChild.classList.replace("fa-regular", "fa-solid");
+            } else {
+                e.currentTarget.firstElementChild.classList.replace("fa-solid", "fa-regular");
+            }
+            console.dir(e.currentTarget.firstElementChild.classList)
+        })
+    })
+}
+
+btnDeleteComment();
+btnAddLikeComment();
