@@ -11,9 +11,9 @@ nav .logo .ico_logo img{ width:100%; height:100%; }
 .logo .txt{ display:block; position:relative; margin-left:16px; padding-left:16px;font-family:'Lobster', cursive; font-size:28px; color:#262626; }
 .logo .txt::before{ position:absolute; left:0; top:6px; content:''; display:block; width:2px; height:32px; background:#000; }
 nav .nav_btns{ display:flex; }
-nav .nav_btns button{ position:relative; padding:8px; }
+nav .nav_btns button{ position:relative; width:44px; height:44px; }
 nav .nav_btns button.on::after{ position:absolute; bottom:0; left:50%; transform:translate(-50%,0); -webkit-transform:translate(-50%,0); -moz-transform:translate(-50%,0); -ms-transform:translate(-50%,0); -o-transform:translate(-50%,0); content:''; display:block; width:3px; height:3px; background:red; border-radius:50%; -webkit-border-radius:50%; -moz-border-radius:50%; -ms-border-radius:50%; -o-border-radius:50%; }
-nav .nav_btns button img{ width:28px; }
+nav .nav_btns button img{ width:100%; padding:8px; }
 nav .nav_btns .btn_profile_cont{ position:relative; }
 nav .nav_btns .profile_cont{ position:absolute; right:0; width:200px; height:auto; background:#fff; border-radius:4px; box-shadow:0 0 5px 1px rgba(0,0,0,0.15); }
 nav .nav_btns .profile_cont .area_click{ position:fixed; width:100%; height:100%; top:0; left:0; z-index:0; }
