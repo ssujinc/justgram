@@ -6,8 +6,8 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="shortcut icon" href="#">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.1/css/all.min.css" integrity="sha512-KfkfwYDsLkIlwQp6LFnl8zNdLGxu9YAA1QvwINks4PhcElQSvqcyVLLD9aMhXd13uQjoXtEKNosOWaZqXgel0g==" crossorigin="anonymous" referrerpolicy="no-referrer" />
-    <link rel="stylesheet" href="style/common.css">
-    <link rel="stylesheet" href="style/main.css">
+    <link rel="stylesheet" href="./style/common.css">
+    <link rel="stylesheet" href="./style/main.css">
     <title>Main</title>
 </head>
 <body>
@@ -15,8 +15,10 @@
         <nav>
             <div class="cont">
                 <h1 class="logo">
-                    <span class="ico_logo"><img src="https://cdn-icons-png.flaticon.com/512/1384/1384031.png" alt="instagram icon"></span>
-                    <span class="txt">Justgram</span>
+                    <a href="./main.html">
+                        <span class="ico_logo"><img src="./img/ico_instagram.png" alt="instagram icon"></span>
+                        <span class="txt">Justgram</span>
+                    </a>
                 </h1>
 
                 <div class="search_cont off">
@@ -33,13 +35,13 @@
 
                 <div class="nav_btns">
                     <button id="btn_explore">
-                        <img src="https://s3.ap-northeast-2.amazonaws.com/cdn.wecode.co.kr/bearu/explore.png" alt="explore icon">
+                        <img src="./img/ico_explore.png" alt="explore icon">
                     </button>
                     <button id="btn_heart" class="on">
-                        <img src="https://s3.ap-northeast-2.amazonaws.com/cdn.wecode.co.kr/bearu/heart.png" alt="heart icon">
+                        <img src="./img/ico_heart.png" alt="heart icon">
                     </button>
                     <button id="btn_profile">
-                        <img src="https://s3.ap-northeast-2.amazonaws.com/cdn.wecode.co.kr/bearu/profile.png" alt="profile icon">
+                        <img src="./img/ico_profile.png" alt="profile icon">
                     </button>
                 </div>
             </div>
@@ -89,18 +91,33 @@
                                     <button class="color_darkGray">더 보기</button>
                                 </div>
                                 <div class="comments">
-                                    <p>
-                                        <span class="profile_name">neceosecius</span>
-                                        <span>거봐 좋았잖아~~~~~</span>
-                                    </p>
-                                    <button><i class="fa-regular fa-heart color_darkGray"></i></button>
+                                    <div>
+                                        <p>
+                                            <b class="profile_name">neceosecius</b>
+                                            <span>거봐 좋았잖아~~~~~</span>
+                                        </p>
+                                        <button class="btn_commDelete">
+                                            <i class="fas fa-times-circle"></i>
+                                        </button>
+                                        <button><i class="fa-regular fa-heart "></i></button>
+                                    </div>
+                                    <div>
+                                        <p>
+                                            <b class="profile_name">neceosecius</b>
+                                            <span>어땠어??</span>
+                                        </p>
+                                        <button class="btn_commDelete">
+                                            <i class="fas fa-times-circle"></i>
+                                        </button>
+                                        <button><i class="fa-regular fa-heart "></i></button>
+                                    </div>
                                 </div>
                                 <p class="color_darkGray">42분 전</p>
                             </div>
                         </div>
                         <div class="feeds_comments">
-                            <input type="text" placeholder="댓글 달기...." />
-                            <button>게시</button>
+                            <input class="comment_input" type="text" placeholder="댓글 달기...." />
+                            <button class="btn_addComment">게시</button>
                         </div>
                     </div>
                 </article>
@@ -147,18 +164,20 @@
                                     <button class="color_darkGray">더 보기</button>
                                 </div>
                                 <div class="comments">
-                                    <p>
-                                        <span class="profile_name">neceosecius</span>
-                                        <span>거봐 좋았잖아~~~~~</span>
-                                    </p>
-                                    <button><i class="fa-regular fa-heart color_darkGray"></i></button>
+                                    <div>
+                                        <p>
+                                            <span class="profile_name">__sddd02</span>
+                                            <span>너무 이쁘다~</span>
+                                        </p>
+                                        <button><i class="fa-regular fa-heart color_darkGray"></i></button>
+                                    </div>
                                 </div>
                                 <p class="color_darkGray">42분 전</p>
                             </div>
                         </div>
                         <div class="feeds_comments">
-                            <input type="text" placeholder="댓글 달기....">
-                            <button>게시</button>
+                            <input class="comment_input" type="text" placeholder="댓글 달기...." />
+                            <button class="btn_addComment">게시</button>
                         </div>
                     </div>
                 </article>
@@ -272,6 +291,6 @@
             </div>
         </main>
     </section>
-    <script src="js/main.js"></script>
+    <script src="./js/main.js"></script>
 </body>
 </html>
