@@ -16,11 +16,24 @@ document.querySelector(".btn_closeSrh").addEventListener("click", ()=>{
     document.getElementsByClassName("search_input")[0].value = ""; 
 })
 
+const btnFeedLikes = document.getElementsByClassName("btn_feedLike");
+Array.from(btnFeedLikes).forEach((btnFeedLike) => {
+    btnFeedLike.addEventListener("click", (e) =>{
+        if( e.currentTarget.firstElementChild.classList.contains("fa-regular") ){
+            e.currentTarget.firstElementChild.classList.replace("fa-regular", "fa-solid");
+        } else {
+            e.currentTarget.firstElementChild.classList.replace("fa-solid", "fa-regular");
+        }
+    })
+})
+
 const inputComments = document.querySelectorAll(".comment_input");
 inputComments.forEach((inputComment, index) => {
     inputComment.addEventListener("keypress", (event)=>{
-        if( event.code === "Enter") {
-            writeComment(index);
+        if( inputComment.value != "" ){
+            if( event.code === "Enter") {
+                writeComment(index);
+            }
         }
     });
 });
@@ -68,7 +81,7 @@ function createCommentDiv(writer, content){
 }
 
 function btnDeleteComment() {
-    const btncommDeletes = document.querySelectorAll(".btn_commDelete");
+    const btncommDeletes = document.querySelectorAll(".comments .btn_commDelete");
     btncommDeletes.forEach((btncommDelete) => {
         btncommDelete.addEventListener("click", (e) => {
             e.currentTarget.parentNode.remove();
@@ -77,7 +90,7 @@ function btnDeleteComment() {
 }
 
 function btnAddLikeComment(){
-    const btnLikes = document.querySelectorAll(".btn_like");
+    const btnLikes = document.querySelectorAll(".comments .btn_like");
     btnLikes.forEach((btnLike) => {
         btnLike.addEventListener("click", (e) =>{
             if( e.currentTarget.firstElementChild.classList.contains("fa-regular") ){
@@ -85,10 +98,20 @@ function btnAddLikeComment(){
             } else {
                 e.currentTarget.firstElementChild.classList.replace("fa-solid", "fa-regular");
             }
-            console.dir(e.currentTarget.firstElementChild.classList)
         })
     })
 }
 
 btnDeleteComment();
 btnAddLikeComment();
+
+document.addEventListener("keyup", () => {
+    const commentInputs = document.querySelectorAll(".comment_input");
+    commentInputs.forEach((commentInput) => {
+        if (commentInput.value != "") {
+            commentInput.nextElementSibling.disabled = false;
+        } else {
+            commentInput.nextElementSibling.disabled = true;
+        }
+    })
+});

@@ -36,7 +36,7 @@ main .feeds_stn{ padding-top:60px; margin-right:28px; flex:1 auto; }
 .feeds_imgs{ width:100%; max-height:610px; overflow:hidden; }
 /* .feeds_cont */
 .feeds_cont .btn_area{ display:flex; justify-content:space-between; padding:12px; font-size:20px; }
-.feeds_cont .btn_area .fa-heart{ color:#ee4955; }
+.feeds_cont .btn_area .fa-solid.fa-heart{ color:#ee4955; }
 .feeds_cont .btn_area button{ padding:0 4px; }
 .feeds_cont .like_nums{ display:flex; align-items:center; padding:0 12px; }
 .feeds_cont .like_nums img{ width:24px; height:24px; border:1px solid #eaeaea; border-radius:50%; -webkit-border-radius:50%; -moz-border-radius:50%; -ms-border-radius:50%; -o-border-radius:50%; }
@@ -57,7 +57,8 @@ main .feeds_stn{ padding-top:60px; margin-right:28px; flex:1 auto; }
 .feeds_cont .desc_cont >.color_darkGray{ color:#262626; margin-top:4px; font-size:10px; }
 .feeds_cont .feeds_comments{ display:flex; justify-content:space-between; padding:16px; border-top:1px solid #efefef; }
 .feeds_cont .feeds_comments input{ width:94%; }
-.feeds_cont .feeds_comments button{ width:6%; color:#0095f6; opacity:0.3; }
+.feeds_cont .feeds_comments button{ width:6%; color:#0095f6; opacity:1; }
+.feeds_cont .feeds_comments button:disabled{ opacity:0.3; }
 
 /* .main_right .profile_cont */
 main .main_right { position:sticky; top:145px; right:0; width:300px; height:500px;}
