@@ -30,6 +30,7 @@ nav .search_cont .btn_innerSrh{ color:#8e8e8e; }
 nav .search_cont.off .btn_innerSrh{ display:block; width:100%; }
 nav .search_cont.on .btn_innerSrh{ display:none; }
 nav .search_cont.off .input_cont{ display:none; }
+nav .search_cont.on{ background:#fff; }
 nav .search_cont.on .input_cont{ display:flex; justify-content:space-between; align-items:center; width:100%; }
 nav .search_cont.on .input_cont i{ flex:0 0 auto; color:#A5A7AA; }
 nav .search_cont.on .input_cont .search_input{ flex:1 1 auto; width:88%; padding:0 4px; }
@@ -117,7 +118,6 @@ main .main_right { position:sticky; top:145px; right:0; width:300px; height:580p
 .info_stn .info_cont a:last-child:after{ display:none; }
 .info_stn > p{ margin-top:12px; }
 
-
 @media screen and (max-width: 980px) {
     nav .cont{ width:100%; }
     main{ flex-direction:column; justify-content:center; width:100%; }
@@ -128,7 +128,6 @@ main .main_right { position:sticky; top:145px; right:0; width:300px; height:580p
     .info_stn{ display:flex; justify-content:center; align-items:center; flex-direction:column; padding:10px 4%; }
     .info_stn > p{ margin-top:4px; }
 }
-
 
 @media screen and (max-width: 480px) {
     nav .cont{ padding:12px 0; }
